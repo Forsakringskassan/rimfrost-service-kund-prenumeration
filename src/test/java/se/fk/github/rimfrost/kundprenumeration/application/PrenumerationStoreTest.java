@@ -1,6 +1,7 @@
 package se.fk.github.rimfrost.kundprenumeration.application;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -53,8 +54,7 @@ class PrenumerationStoreTest
    @DisplayName("KUNDPREN-FR-01.6: deleteByPrenumerationId silently ignores unknown ID")
    void deleteByPrenumerationId_ignores_missing_id()
    {
-      store.deleteByPrenumerationId("unknown-id");
-      // no exception expected
+      assertDoesNotThrow(() -> store.deleteByPrenumerationId("unknown-id"));
    }
 
    @Test
