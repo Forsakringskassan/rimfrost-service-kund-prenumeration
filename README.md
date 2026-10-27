@@ -1,5 +1,9 @@
 # kund-prenumeration
 
+> **Mock-tjänst** — Avsedd endast för test- och demomiljöer, inte produktion.
+> Prenumerationer lagras enbart i minnet och försvinner vid omstart.
+
+
 Quarkus-tjänst som tillhandahåller en generell subscribe/unsubscribe-mekanism mot kundcentrerat
 data. När kundcentrerat data förändras (t.ex. efter att en användare kompletterat en uppgift på
 Mina sidor) levererar servicen ett Kafka-event till alla aktiva prenumeranter för det berörda
